@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Parking Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<h1>🚗 Smart Parking Management System</h1>
+
+<p>Manage Vehicles • Parking Slots • Revenue</p>
+
+</header>
+
+<!-- Dashboard -->
+
+<section class="dashboard">
+
+<div class="card">
+
+<h2 id="availableSlots">50</h2>
+
+<p>Available Slots</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="occupiedSlots">0</h2>
+
+<p>Occupied Slots</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="todayRevenue">Rs.0</h2>
+
+<p>Today's Revenue</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="vehicleCount">0</h2>
+
+<p>Vehicles Parked</p>
+
+</div>
+
+</section>
+
+<!-- Vehicle Form -->
+
+<section class="form-section">
+
+<h2>Park New Vehicle</h2>
+
+<div class="form-grid">
+
+<input
+type="text"
+id="vehicleNumber"
+placeholder="Vehicle Number">
+
+<input
+type="text"
+id="ownerName"
+placeholder="Owner Name">
+
+<select id="vehicleType">
+
+<option>Car</option>
+
+<option>Bike</option>
+
+<option>Van</option>
+
+</select>
+
+<select id="slot">
+
+<option>A1</option>
+<option>A2</option>
+<option>A3</option>
+<option>A4</option>
+<option>A5</option>
+
+<option>B1</option>
+<option>B2</option>
+<option>B3</option>
+<option>B4</option>
+<option>B5</option>
+
+<option>C1</option>
+<option>C2</option>
+<option>C3</option>
+<option>C4</option>
+<option>C5</option>
+
+</select>
+
+</div>
+
+<button id="parkBtn">
+
+Park Vehicle
+
+</button>
+
+</section>
+
+<!-- Search -->
+
+<section class="search-section">
+
+<input
+type="text"
+id="searchInput"
+placeholder="🔍 Search Vehicle Number">
+
+</section>
+
+<!-- Parking Grid -->
+
+<section>
+
+<h2>Parking Slots</h2>
+
+<div id="parkingGrid" class="parking-grid">
+
+<!-- JS Generates Slots -->
+
+</div>
+
+</section>
+
+<!-- Vehicle Table -->
+
+<section>
+
+<h2>Currently Parked Vehicles</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Vehicle</th>
+
+<th>Owner</th>
+
+<th>Type</th>
+
+<th>Slot</th>
+
+<th>Arrival</th>
+
+<th>Fee</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="vehicleTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- History -->
+
+<section>
+
+<h2>Parking History</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Vehicle</th>
+
+<th>Slot</th>
+
+<th>Arrival</th>
+
+<th>Exit</th>
+
+<th>Fee</th>
+
+</tr>
+
+</thead>
+
+<tbody id="historyTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Smart Parking Management System
+
+</p>
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
